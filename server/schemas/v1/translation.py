@@ -2,7 +2,7 @@ from typing import Annotated
 
 from msgspec import Meta, Struct
 
-from server.features.types import Languages
+from server.types import Languages
 
 
 class Translation(Struct):
@@ -19,7 +19,8 @@ class Translation(Struct):
     """
 
     text: Annotated[
-        str, Meta(max_length=8192, description='source text of a single language', examples=['Hello, world!'])
+        str,
+        Meta(min_length=1, max_length=8192, description='source text of a single language', examples=['Hello, world!']),
     ]
 
     source: Annotated[
