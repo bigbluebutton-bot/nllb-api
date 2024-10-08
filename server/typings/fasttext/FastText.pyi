@@ -1,3 +1,5 @@
+# pylint: skip-file
+
 from typing import Any, Literal
 
 from numpy import float32
@@ -211,7 +213,7 @@ type LanguageLabels = Literal[
 ]
 
 class _FastText:
-    def __init__(self, model_path: str | None = None, args: dict[str, Any] | None = None): ...
+    def __init__(self, model_path: str | None = None, args: dict[str, Any] | None = None) -> None: ...
     def predict(
         self,
         text: str | list[str],
