@@ -1,7 +1,8 @@
-import requests
 import concurrent.futures
 import time
-from typing import List, Dict, Tuple
+from typing import Dict, List, Tuple
+
+import requests
 
 # List of complex sentences to translate
 sentences: List[str] = [
